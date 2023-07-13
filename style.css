@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Source Serif Pro', sans-serif;
+
+  --font-color: #a54328;
+  --btn-color: #a54328;
+  --btn-font-color: #fff;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--font-color);
+}
+
+main {
+  max-width: 32rem;
+  margin-inline: auto; /* centraliza*/
+
+  padding: 5.6rem 4rem;
+  box-sizing: content-box; /* ele ajusta o tamanho do conteúdo que esta dentro do elemento */
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+img {
+  width: 100%;
+  margin-block: 3.2rem; /* coloca margin em cima e em baixo da imagem */
+}
+
+h1,
+h2 {
+  /*clamp(min, ideal, alto)*/
+  font-size: clamp(2.8rem, 2vw + 1rem, 4rem);
+  line-height: clamp(3.6rem, 2vw + 1rem, 5rem);
+}
+
+h2 {
+  margin-bottom: 3.2rem;
+}
+
+p,
+li,
+strong {
+  font-size: clamp(1.4rem, 1vw + 0.4rem, 2rem);
+  line-height: clamp(1.8rem, 1vw + 1rem, 2.5rem);
+}
+
+ul,
+ol {
+  padding-left: 2.4rem;
+}
+
+ul {
+  margin-bottom: 2.4rem;
+}
+
+button {
+  font-family: 'Source Serif 4', sans-serif;
+
+  background-color: var(--btn-color);
+  color: var(--btn-font-color);
+
+  border: 0;
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 0.6rem;
+  cursor: pointer;
+
+  margin-top: 3.2rem;
+}
+
+@media (min-width: 1120px) {
+  main {
+    flex-direction: row;
+    max-width: fit-content; /* encaixa no tamanho do conteudo */
+    gap: 16rem;
+
+    padding: 9rem 6rem;
+  }
+
+  .recipe {
+    max-width: 43.5rem;
+  }
+
+  .ingredients {
+    max-width: 52.5rem;
+  }
+  /*Como usar o clamp: quando tiver muito ponto de quebra, muita complexidade, preciso de uma flexibilidade maior*/
+
+  /* h1,
+  h2 {
+    font-size: 2rem;
+    line-height: normal;
+  }*/
+
+  /*p,
+  li,
+  strong {
+    font-size: 2rem;
+    line-height: normal;
+  }*/
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
